@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7c58cecff2.js" crossorigin="anonymous"></script>
+    <script defer src="./index.js"></script>
+    <title>Document</title>
+    <style>
+    .hidden {
+        display: none;
+    }   
+    .search-container {
+        width: 20.875rem;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #572ee5;
+        border-radius: 27px;
+        padding: 1rem;
+        padding-bottom: 0;
+    }
+    .search-box {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+    .search-btn,
+    .default-search-btn {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 1.25rem;
+    }
+    .search-btn i {
+        color: #9cafc3;
+    }
+    .default-search-btn i {
+        color: #572ee5;
+    }
+    .search-input {
+        border: none;
+        outline: none;
+        width: 95%;
+        background-color: transparent;
+        margin-left: 0.5rem;
+        font-size: 1rem;
+    }
+    .predictive-container {
+        width: 100%;
+    }   
+    .predictive-container {
+        width: 100%;
+    }
+    .predictive {
+        width: 100%;
+        padding: 0;
+        font-size: 1rem;
+        background-color: transparent;
+        color: #9cafc3;
+    }
+    .predictive-suggestions {
+        display: flex;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        padding-top: 1rem;
+        cursor: pointer;
+    }
+    .predictive-suggestions:first-child {
+        border-top: 1px solid #9cafc3;
+    }
+    .predictive-suggestions:last-child {
+        margin-bottom: 1rem;
+    }
+    .predictive-suggestions .predictive-text-results {
+        margin-left: 1rem;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="search-container" id="searchContainer">
+        <div class="search-box">
+            <button type="submit" class="search-btn hidden " id="searchBtn">
+                <i id="glass" class="fas fa-search"></i>
+            </button>
+            <input class="search-input" id="searchInput" autocomplete="off" type="text" placeholder="Busca GIFOS y más" />
+            <button class="default-search-btn" id="defaultSearchBtn">
+                <i id="defaultSearchBtnIcon" class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="predictive-container">
+            <ul class="predictive" id="predictiveResults">
+                <li class="predictive-suggestions"> <i class="fas fa-search"></i> <p class="predictive-text-results">hello</p></li>
+                <li class="predictive-suggestions"> <i class="fas fa-search"></i> <p class="predictive-text-results">hello</p></li>
+                <li class="predictive-suggestions"> <i class="fas fa-search"></i> <p class="predictive-text-results">hello</p></li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>
